@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px;
+    }
+    
+    .nav a {
+      margin-right: 15px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .search-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 150px;
+    }
+    
+    .logo {
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #4285f4;
+    }
+    
+    .logo span:nth-child(1) { color: #4285f4; }
+    .logo span:nth-child(2) { color: #ea4335; }
+    .logo span:nth-child(3) { color: #fbbc05; }
+    .logo span:nth-child(4) { color: #4285f4; }
+    .logo span:nth-child(5) { color: #34a853; }
+    .logo span:nth-child(6) { color: #ea4335; }
+    
+    .search-box {
+      width: 500px;
+      height: 40px;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      padding: 0 15px;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 20px;
+    }
+    
+    .search-box:hover {
+      box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .btn {
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      color: #3c4043;
+      font-size: 14px;
+      margin: 11px 4px;
+      padding: 0 16px;
+      line-height: 27px;
+      height: 36px;
+      cursor: pointer;
+    }
+    
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      border-top: 1px solid #e4e4e4;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+    }
+    
+    .footer-links a {
+      color: #70757a;
+      text-decoration: none;
+      font-size: 14px;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="#">Inbox</a>
+    <a href="#">Cat photos</a>
+    <a href="#">Account</a>
+  </div>
+  
+  <div class="search-container">
+    <div class="logo">
+      <span>D</span><span>o</span><span>o</span><span>d</span><span>l</span><span>e</span>
+    </div>
+    <input type="text" class="search-box" placeholder="Search videos about cats....">
+    <div class="buttons">
+      <button class="btn">Simply search</button>
+      <button class="btn">Possbly feeling Lucky</button>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="footer-links">
+      <div>
+        <a href="#">About</a>
+        <a href="#">Ads</a>
+        <a href="#">Business</a>
+      </div>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.querySelector('.search-box').addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        alert('You searched for: ' + this.value);
+      }
+    });
+    
+    document.querySelector('.buttons').addEventListener('click', function(event) {
+      if (event.target.classList.contains('btn')) {
+        alert('You clicked: ' + event.target.textContent);
+      }
+    });
+  </script>
+</body>
+</html>
